@@ -1,5 +1,8 @@
 
 using Microsoft.EntityFrameworkCore;
+using ProductSmallTask.automapper;
+using ProductSmallTask.Repo;
+using ProductSmallTask.Service;
 using System;
 
 namespace ProductSmallTask
@@ -13,7 +16,10 @@ namespace ProductSmallTask
             builder.Services.AddDbContext<ApplicationDbContexr>(options =>
            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             // Add services to the container.
-           // builder.Services.AddScoped<IbookingSrevices, bookingSrevices>();
+              builder. Services.AddAutoMapper(typeof(ProductProfile));
+
+            builder.Services.AddScoped<IProductServices, ProductServices>();
+            builder.Services.AddScoped<IProductRepo, ProductRepo>();
             // Add services to the container.
 
             builder.Services.AddControllers();

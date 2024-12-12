@@ -12,6 +12,5 @@ namespace ProductSmallTask.Models
         public decimal Price { get; set; }
       
         public string Category { get; set; }
-        public DateTime DateAdded { get; set; }
-    }
+        public DateTime DateAdded =DateTime.Now;
 }
