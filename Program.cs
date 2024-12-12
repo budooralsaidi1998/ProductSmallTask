@@ -1,4 +1,7 @@
 
+using Microsoft.EntityFrameworkCore;
+using System;
+
 namespace ProductSmallTask
 {
     public class Program
@@ -7,6 +10,10 @@ namespace ProductSmallTask
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddDbContext<ApplicationDbContexr>(options =>
+           options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            // Add services to the container.
+           // builder.Services.AddScoped<IbookingSrevices, bookingSrevices>();
             // Add services to the container.
 
             builder.Services.AddControllers();
