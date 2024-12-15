@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\projects\\ProductSmallTask\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|c:\\projects\\productsmalltask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|c:\\projects\\productsmalltask\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|c:\\projects\\productsmalltask\\applicationdbcontexr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|solutionrelative:applicationdbcontexr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|c:\\projects\\productsmalltask\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|solutionrelative:service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|c:\\projects\\productsmalltask\\service\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|solutionrelative:service\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projects\\ProductSmallTask\\Migrations\\20241215111538_secondmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241215111538_secondmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -35,24 +55,8 @@
       "RelativeMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|solutionrelative:repo\\productrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|c:\\projects\\productsmalltask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|c:\\projects\\productsmalltask\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|solutionrelative:service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|c:\\projects\\productsmalltask\\service\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|solutionrelative:service\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|c:\\projects\\productsmalltask\\repo\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|solutionrelative:repo\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|c:\\projects\\productsmalltask\\applicationdbcontexr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|solutionrelative:applicationdbcontexr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|c:\\projects\\productsmalltask\\repo\\iproductrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|c:\\projects\\productsmalltask\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|c:\\projects\\productsmalltask\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F829B380-8FAC-42C4-A316-75F3CC294FA4}|ProductSmallTask.csproj|c:\\projects\\productsmalltask\\productsmalltask.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -78,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,176 +86,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20241215111538_secondmodel.cs",
-              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Migrations\\20241215111538_secondmodel.cs",
-              "RelativeDocumentMoniker": "Migrations\\20241215111538_secondmodel.cs",
-              "ToolTip": "C:\\projects\\ProductSmallTask\\Migrations\\20241215111538_secondmodel.cs",
-              "RelativeToolTip": "Migrations\\20241215111538_secondmodel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T11:15:38.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\projects\\ProductSmallTask\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAqwFAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T11:11:01.282Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ProductInputDTO.cs",
-              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\DOTS\\ProductInputDTO.cs",
-              "RelativeDocumentMoniker": "DOTS\\ProductInputDTO.cs",
-              "ToolTip": "C:\\projects\\ProductSmallTask\\DOTS\\ProductInputDTO.cs",
-              "RelativeToolTip": "DOTS\\ProductInputDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T08:37:45.688Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductOutputDTO.cs",
-              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\DOTS\\ProductOutputDTO.cs",
-              "RelativeDocumentMoniker": "DOTS\\ProductOutputDTO.cs",
-              "ToolTip": "C:\\projects\\ProductSmallTask\\DOTS\\ProductOutputDTO.cs",
-              "RelativeToolTip": "DOTS\\ProductOutputDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T08:37:59.082Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "Models\\Product.cs",
-              "ToolTip": "C:\\projects\\ProductSmallTask\\Models\\Product.cs",
-              "RelativeToolTip": "Models\\Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T08:33:48.525Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductProfile.cs",
-              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\automapper\\ProductProfile.cs",
-              "RelativeDocumentMoniker": "automapper\\ProductProfile.cs",
-              "ToolTip": "C:\\projects\\ProductSmallTask\\automapper\\ProductProfile.cs",
-              "RelativeToolTip": "automapper\\ProductProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T09:21:10.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
-              "ToolTip": "C:\\projects\\ProductSmallTask\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T09:13:52.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductRepo.cs",
-              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Repo\\ProductRepo.cs",
-              "RelativeDocumentMoniker": "Repo\\ProductRepo.cs",
-              "ToolTip": "C:\\projects\\ProductSmallTask\\Repo\\ProductRepo.cs",
-              "RelativeToolTip": "Repo\\ProductRepo.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T08:42:35.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Service\\UserService.cs",
               "RelativeDocumentMoniker": "Service\\UserService.cs",
               "ToolTip": "C:\\projects\\ProductSmallTask\\Service\\UserService.cs",
               "RelativeToolTip": "Service\\UserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAZAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T11:08:19.786Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProductServices.cs",
-              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Service\\ProductServices.cs",
-              "RelativeDocumentMoniker": "Service\\ProductServices.cs",
-              "ToolTip": "C:\\projects\\ProductSmallTask\\Service\\ProductServices.cs",
-              "RelativeToolTip": "Service\\ProductServices.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAuwBEAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T09:04:33.705Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserRepo.cs",
-              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Repo\\UserRepo.cs",
-              "RelativeDocumentMoniker": "Repo\\UserRepo.cs",
-              "ToolTip": "C:\\projects\\ProductSmallTask\\Repo\\UserRepo.cs",
-              "RelativeToolTip": "Repo\\UserRepo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T11:06:21.055Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\projects\\ProductSmallTask\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACEAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T08:46:44.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IProductRepo.cs",
-              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Repo\\IProductRepo.cs",
-              "RelativeDocumentMoniker": "Repo\\IProductRepo.cs",
-              "ToolTip": "C:\\projects\\ProductSmallTask\\Repo\\IProductRepo.cs",
-              "RelativeToolTip": "Repo\\IProductRepo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T11:05:21.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 2,
               "Title": "ApplicationDbContexr.cs",
               "DocumentMoniker": "C:\\projects\\ProductSmallTask\\ApplicationDbContexr.cs",
               "RelativeDocumentMoniker": "ApplicationDbContexr.cs",
@@ -268,7 +112,180 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\projects\\ProductSmallTask\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-12T08:47:21.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\projects\\ProductSmallTask\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAEQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T08:46:44.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductServices.cs",
+              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Service\\ProductServices.cs",
+              "RelativeDocumentMoniker": "Service\\ProductServices.cs",
+              "ToolTip": "C:\\projects\\ProductSmallTask\\Service\\ProductServices.cs",
+              "RelativeToolTip": "Service\\ProductServices.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAuwBEAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T09:04:33.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20241215111538_secondmodel.cs",
+              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Migrations\\20241215111538_secondmodel.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241215111538_secondmodel.cs",
+              "ToolTip": "C:\\projects\\ProductSmallTask\\Migrations\\20241215111538_secondmodel.cs",
+              "RelativeToolTip": "Migrations\\20241215111538_secondmodel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T11:15:38.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductInputDTO.cs",
+              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\DOTS\\ProductInputDTO.cs",
+              "RelativeDocumentMoniker": "DOTS\\ProductInputDTO.cs",
+              "ToolTip": "C:\\projects\\ProductSmallTask\\DOTS\\ProductInputDTO.cs",
+              "RelativeToolTip": "DOTS\\ProductInputDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T08:37:45.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\projects\\ProductSmallTask\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAqwFAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T11:11:01.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductOutputDTO.cs",
+              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\DOTS\\ProductOutputDTO.cs",
+              "RelativeDocumentMoniker": "DOTS\\ProductOutputDTO.cs",
+              "ToolTip": "C:\\projects\\ProductSmallTask\\DOTS\\ProductOutputDTO.cs",
+              "RelativeToolTip": "DOTS\\ProductOutputDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T08:37:59.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "C:\\projects\\ProductSmallTask\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T08:33:48.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductProfile.cs",
+              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\automapper\\ProductProfile.cs",
+              "RelativeDocumentMoniker": "automapper\\ProductProfile.cs",
+              "ToolTip": "C:\\projects\\ProductSmallTask\\automapper\\ProductProfile.cs",
+              "RelativeToolTip": "automapper\\ProductProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T09:21:10.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\projects\\ProductSmallTask\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T09:13:52.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProductRepo.cs",
+              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Repo\\ProductRepo.cs",
+              "RelativeDocumentMoniker": "Repo\\ProductRepo.cs",
+              "ToolTip": "C:\\projects\\ProductSmallTask\\Repo\\ProductRepo.cs",
+              "RelativeToolTip": "Repo\\ProductRepo.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T08:42:35.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserRepo.cs",
+              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Repo\\UserRepo.cs",
+              "RelativeDocumentMoniker": "Repo\\UserRepo.cs",
+              "ToolTip": "C:\\projects\\ProductSmallTask\\Repo\\UserRepo.cs",
+              "RelativeToolTip": "Repo\\UserRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T11:06:21.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 14,
+              "Title": "IProductRepo.cs",
+              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Repo\\IProductRepo.cs",
+              "RelativeDocumentMoniker": "Repo\\IProductRepo.cs",
+              "ToolTip": "C:\\projects\\ProductSmallTask\\Repo\\IProductRepo.cs",
+              "RelativeToolTip": "Repo\\IProductRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T11:05:21.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\projects\\ProductSmallTask\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -277,19 +294,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T11:05:11.508Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\projects\\ProductSmallTask\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\projects\\ProductSmallTask\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-12T08:47:21.318Z",
               "EditorCaption": ""
             },
             {
@@ -304,10 +308,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-12-12T08:33:54.202Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
