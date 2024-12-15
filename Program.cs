@@ -12,17 +12,19 @@ namespace ProductSmallTask
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddControllers();
 
-            builder.Services.AddDbContext<ApplicationDbContexr>(options =>
-           options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             // Add services to the container.
-              builder. Services.AddAutoMapper(typeof(ProductProfile));
-
+            //builder. Services.AddAutoMapper(typeof(ProductProfile));
+            builder.Services.AddScoped<IUserRepo, UserRepo>();
+            builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IProductServices, ProductServices>();
             builder.Services.AddScoped<IProductRepo, ProductRepo>();
             // Add services to the container.
+            builder.Services.AddDbContext<ApplicationDbContexr>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            builder.Services.AddControllers();
+          
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

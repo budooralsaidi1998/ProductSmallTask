@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProductSmallTask.DOTS;
 using ProductSmallTask.Models;
 using ProductSmallTask.Repo;
@@ -6,6 +7,7 @@ using ProductSmallTask.Service;
 
 namespace ProductSmallTask.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[Controller]")]
     public class ProductController:ControllerBase
@@ -18,6 +20,7 @@ namespace ProductSmallTask.Controllers
 
         }
 
+        [AllowAnonymous]
 
         [HttpPost("AddProduct")]
         public IActionResult AddProduct(ProductInputDTO product)

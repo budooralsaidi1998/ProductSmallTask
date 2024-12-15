@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProductSmallTask;
 
@@ -10,9 +11,11 @@ using ProductSmallTask;
 namespace ProductSmallTask.Migrations
 {
     [DbContext(typeof(ApplicationDbContexr))]
-    partial class ApplicationDbContexrModelSnapshot : ModelSnapshot
+    [Migration("20241215111538_secondmodel")]
+    partial class secondmodel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
