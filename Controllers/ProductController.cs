@@ -19,102 +19,73 @@ namespace ProductSmallTask.Controllers
         }
 
 
-
-        //[HttpPost]
-        //public IActionResult AddProduct([FromBody] ProductInputDTO productCreateDTO)
-        //{
-        //    // Check if the input DTO is null
-        //    if (productCreateDTO == null)
-        //    {
-        //        return BadRequest("Product data is required.");
-        //    }
-
-        //    try
-        //    {
-        //        // Call the service to add the product and get the output DTO
-        //        ProductOutputDTO createdProduct = servicesproduct.AddProduct(productCreateDTO);
-
-        //        // Check if the product was successfully created
-        //        if (createdProduct == null)
-        //        {
-        //            return BadRequest("The product could not be created.");
-        //        }
-
-        //        // Return the created product (Output DTO)
-        //        return CreatedAtAction(nameof(), new { id = createdProduct.Id }, createdProduct);
-        //    }
-        //    catch (ArgumentException ex)
-        //    {
-        //        // Specific exception for validation issues (e.g., invalid product data)
-        //        return BadRequest($"Invalid input: {ex.Message}");
-        //    }
-        //    catch (InvalidOperationException ex)
-        //    {
-        //        // Handle any operation-related exceptions (like database-related issues)
-        //        return BadRequest($"Operation failed: {ex.Message}");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // Catch any other unexpected exceptions
-        //        return StatusCode(StatusCodes.Status500InternalServerError, $"An unexpected error occurred: {ex.Message}");
-        //    }
-        //}
-
-        [HttpPost]
-        public IActionResult AddProduct([FromBody] ProductInputDTO productCreateDTO)
+        [HttpPost("AddProduct")]
+        public IActionResult AddProduct(ProductInputDTO product)
         {
-            if (productCreateDTO == null)
-            {
-                return BadRequest("Product data is required.");
-            }
-
             try
             {
-                // Manually create a Product model from ProductInputDTO
-                Product product = new Product
-                {
-                    Name = productCreateDTO.Name,
-                    Price = productCreateDTO.Price,
-                    Category = string.IsNullOrEmpty(productCreateDTO.Category) ? "general" : productCreateDTO.Category,  // Default to "general" if no category provided
-                    DateAdded = DateTime.UtcNow // You can set the date when the product is added
-                };
-
-                // Call the service to add the product
-                Product createdProduct = servicesproduct.AddProduct(product);
-
-                if (createdProduct == null)
-                {
-                    return BadRequest("The product could not be created.");
-                }
-
-                // Map the created product to ProductOutputDTO (manual mapping)
-                ProductOutputDTO createdProductDTO = new ProductOutputDTO
-                {
-                    Id = createdProduct.Id,
-                    Name = createdProduct.Name,
-                    Price = createdProduct.Price,
-                    Category = createdProduct.Category,
-                    DateAdded = createdProduct.DateAdded
-                };
-
-                // Return the created product (Output DTO)
-                return CreatedAtAction(nameof(GetProductById), new { id = createdProductDTO.Id }, createdProductDTO);
+                return Ok(servicesproduct.AddNewProduct(product));
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred: {ex.Message}");
+                return BadRequest(ex.Message);
             }
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GetProductById(int id)
+
+        [HttpGet("GetAllProducts")]
+        public IActionResult GetAllProducts(int page, int PageSize)
         {
-            var product = servicesproduct.GetById(id);
-            if (product == null)
+            try
             {
-                return NotFound();
+                return Ok(servicesproduct.GetAllProducts(page, PageSize));
             }
-            return Ok(product);
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+        [HttpGet("GetProductByID {ID}")]
+        public IActionResult GetProductByID(int ID)
+        {
+            try
+            {
+                return Ok(servicesproduct.GetProductByID(ID));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+        [HttpPatch("UpdateProduct {ID}")]
+        public IActionResult GetProductByID(int ID, ProductInputDTO product)
+        {
+            try
+            {
+                return Ok(servicesproduct.UpdateProduct(product, ID));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("DeleteProduct {ID}")]
+        public IActionResult DeleteProduct(int ID)
+        {
+            try
+            {
+                servicesproduct.DeleteProduct(ID);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

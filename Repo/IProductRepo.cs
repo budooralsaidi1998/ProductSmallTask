@@ -1,13 +1,15 @@
-﻿using ProductSmallTask.Models;
+﻿using ProductSmallTask.DOTS;
+using ProductSmallTask.Models;
 
 namespace ProductSmallTask.Repo
 {
     public interface IProductRepo
     {
-        void AddProduct(Product product);
+        int AddProduct(Product product);
         void DeleteProduct(int id);
-        List<Product> GetAllProducts();
-        Product GetById(int id);
-        void UpdateProduct(Product product);
+        IEnumerable<Product> GetAllProducts(int page, int PageSize);
+        Product GetProductById(int id);
+        int GetProductId(string name);
+        Product UpdateProduct(int id, ProductInputDTO product);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using ProductSmallTask.DOTS;
 using ProductSmallTask.Models;
 using ProductSmallTask.Repo;
+using System.Xml.Serialization;
 
 namespace ProductSmallTask.Service
 {
@@ -14,52 +15,9 @@ namespace ProductSmallTask.Service
 
         }
 
-        public void AddProduct(Product product)
+        public int AddNewProduct(ProductInputDTO product)
         {
-            try
-            {
-                // Validate product name 
-                if (string.IsNullOrWhiteSpace(product.Name))
-                {
-                    throw new ArgumentException("Product name is required.");
-                }
 
-                // Validate price (must be greater than 0)
-                if (product.Price <= 0)
-                {
-                    throw new ArgumentException("Product price must be greater than 0.");
-                }
-
-                // Set default category if not provided
-                if (string.IsNullOrWhiteSpace(product.Category))
-                {
-                    product.Category = "general";
-                }
-                 if(product.DateAdded != DateTime.MinValue) 
-                    {
-                        product.DateAdded = DateTime.MinValue;
-                    }
-
-                // Add the product to the database
-                _repo.AddProduct(product);
-               
-            }
-
-
-            catch (ArgumentException ex)
-            {
-                // Handle specific validation exceptions
-                throw new InvalidOperationException($"Validation error: {ex.Message}", ex);
-            }
-            catch (Exception ex)
-            {
-                // Handle unexpected errors
-                throw new InvalidOperationException("An error occurred while adding the product.", ex);
-            }
-        }
-
-        public void AddNewProduct(ProductInputDTO product)
-        {
             var CompleteProduct = new Product
             {
                 Name = product.Name,
@@ -67,20 +25,54 @@ namespace ProductSmallTask.Service
                 Category = product.Category,
                 DateAdded = DateTime.Now,
             };
-             _repo.AddProduct(CompleteProduct);
+
+            return _repo.AddProduct(CompleteProduct);
         }
 
 
-        public List<ProductOutputDTO> GetProducts()
+        public List<ProductOutputDTO> GetAllProducts(int page, int PageSize)
         {
             var ListofProducts = new List<ProductOutputDTO>();
-            foreach (Product product in _repo.GetAllProducts())
+            foreach (Product product in _repo.GetAllProducts(page, PageSize))
             {
                 var p = ConvertToOutputDTO(product);
+
                 ListofProducts.Add(p);
             }
             return ListofProducts;
         }
+
+
+        public ProductOutputDTO GetProductByID(int id)
+        {
+            var product = _repo.GetProductById(id);
+
+            //Mapping the product (Product to DTO)
+            var p = new ProductOutputDTO
+            {
+                Name = product.Name,
+                Price = product.Price,
+                Category = product.Category,
+                DateAdded = product.DateAdded,
+            };
+
+            return p;
+        }
+
+
+        public ProductOutputDTO UpdateProduct(ProductInputDTO product, int ID)
+        {
+            var updatedProduct = _repo.UpdateProduct(ID, product);
+
+            return ConvertToOutputDTO(updatedProduct);
+        }
+
+        public void DeleteProduct(int ID)
+        {
+            _repo.DeleteProduct(ID);
+        }
+
+
         public ProductOutputDTO ConvertToOutputDTO(Product product)
         {
             var p = new ProductOutputDTO
@@ -92,157 +84,20 @@ namespace ProductSmallTask.Service
             };
             return p;
         }
+
+
         public Product ConvertToProduct(ProductInputDTO productDTO)
         {
-            string ID =_repo.GetById(productDTO);
+            int ID = _repo.GetProductId(productDTO.Name);
             var p = new Product
             {
-                PID = ID,
+                Id = ID,
                 Name = productDTO.Name,
                 Price = productDTO.Price,
                 Category = productDTO.Category,
                 DateAdded = DateTime.Now,
             };
             return p;
-        }
-        public Product GetById(int id)
-        {
-            try
-            {
-                // Validate the ID
-                if (id <= 0)
-                {
-                    throw new ArgumentException("Invalid product ID.");
-                }
-
-                // Get the product from the repository
-                var product = _repo.GetById(id);
-
-                if (product == null)
-                {
-                    throw new KeyNotFoundException("Product not found.");
-                }
-
-                return product;
-            }
-            catch (ArgumentException ex)
-            {
-                throw new InvalidOperationException($"Validation error: {ex.Message}", ex);
-            }
-            catch (KeyNotFoundException ex)
-            {
-                throw new InvalidOperationException($"Error: {ex.Message}", ex);
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException("An error occurred while retrieving the product.", ex);
-            }
-        }
-
-
-        // Get all products
-        public List<Product> GetAllProducts()
-        {
-            try
-            {
-                // Get the list of products
-                var products = _repo.GetAllProducts();
-
-                if (products == null || products.Count == 0)
-                {
-                    throw new InvalidOperationException("No products found.");
-                }
-
-                return products;
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException("An error occurred while retrieving the products.", ex);
-            }
-        }
-
-        public void UpdateProduct(Product product)
-        {
-            try
-            {
-                // Validate the product before updating
-                if (string.IsNullOrWhiteSpace(product.Name))
-                {
-                    throw new ArgumentException("Product name is required.");
-                }
-
-                if (product.Price <= 0)
-                {
-                    throw new ArgumentException("Product price must be greater than 0.");
-                }
-
-                if (product.Id <= 0)
-                {
-                    throw new ArgumentException("Invalid product ID.");
-                }
-
-                // Get the existing product from the repository
-                var existingProduct = _repo.GetById(product.Id);
-                if (existingProduct == null)
-                {
-                    throw new KeyNotFoundException("Product not found.");
-                }
-
-                // Update the product fields
-                existingProduct.Name = product.Name;
-                existingProduct.Price = product.Price;
-                existingProduct.Category = product.Category ?? "general"; // Default to "general" if Category is null
-                existingProduct.DateAdded = product.DateAdded;
-
-                // Save the updated product
-                _repo.UpdateProduct(existingProduct);
-            }
-            catch (ArgumentException ex)
-            {
-                throw new InvalidOperationException($"Validation error: {ex.Message}", ex);
-            }
-            catch (KeyNotFoundException ex)
-            {
-                throw new InvalidOperationException($"Error: {ex.Message}", ex);
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException("An error occurred while updating the product.", ex);
-            }
-        }
-
-        public void DeleteProduct(int id)
-        {
-            try
-            {
-                // Validate the product ID
-                if (id <= 0)
-                {
-                    throw new ArgumentException("Invalid product ID.");
-                }
-
-                // Check if the product exists in the repository
-                var product = _repo.GetById(id);
-                if (product == null)
-                {
-                    throw new KeyNotFoundException("Product not found.");
-                }
-
-                // Delete the product from the repository
-                _repo.DeleteProduct(id);
-            }
-            catch (ArgumentException ex)
-            {
-                throw new InvalidOperationException($"Validation error: {ex.Message}", ex);
-            }
-            catch (KeyNotFoundException ex)
-            {
-                throw new InvalidOperationException($"Error: {ex.Message}", ex);
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException("An error occurred while deleting the product.", ex);
-            }
         }
     }
 }

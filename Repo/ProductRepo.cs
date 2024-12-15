@@ -1,4 +1,5 @@
-﻿using ProductSmallTask.Models;
+﻿using ProductSmallTask.DOTS;
+using ProductSmallTask.Models;
 using System.Collections.Specialized;
 
 namespace ProductSmallTask.Repo
@@ -14,105 +15,55 @@ namespace ProductSmallTask.Repo
         }
 
 
-        public void AddProduct(Product product)
+        public IEnumerable<Product> GetAllProducts(int page, int PageSize)
         {
-            try
-            {
-                // Add the product to the DbSet
-                _context.products.Add(product);
-
-                // Save changes to the database
-                _context.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                // Log the exception or handle it as needed
-                throw new InvalidOperationException("An error occurred while adding the product.", ex);
-            }
+            int size = PageSize;
+            int number = PageSize * page;
+            return _context.products.OrderByDescending(p => p.DateAdded).Skip(number).Take(PageSize).ToList();
         }
 
-        // Method to get a product by its ID
-        public Product GetById(int id)
+        public Product GetProductById(int id)
         {
-            try
-            {
-                return _context.products.FirstOrDefault(p => p.Id == id);
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException(ex.Message);
-            }
+            return _context.products.FirstOrDefault(p => p.Id == id);
         }
 
-        // Method to get all products
-        public List<Product> GetAllProducts()
+        public int GetProductId(string name)
         {
-            try
-            {
-
-
-                return _context.products.ToList();
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException(ex.Message);
-
-            }
+            var product = _context.products.FirstOrDefault(p => p.Name == name);
+            return product.Id;
         }
 
-        public void UpdateProduct(Product product)
+        public int AddProduct(Product product)
         {
-            try
-            {
-                // Find the product to update
-                //var existingProduct = _context.products.FirstOrDefault(p => p.Id == product.Id);
-
-                //if (existingProduct == null)
-                //{
-                //    throw new KeyNotFoundException("Product not found.");
-                //}
-
-                //// Update the existing product's properties
-                //existingProduct.Name = product.Name;
-                //existingProduct.Price = product.Price;
-                //existingProduct.Category = product.Category ?? "general"; // Default to "general" if Category is null
-                //existingProduct.DateAdded = product.DateAdded;
-
-                _context.products.Update(product);
-                // Save the changes to the database
-                _context.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException("An error occurred while updating the product.", ex);
-            }
+            _context.products.Add(product);
+            _context.SaveChanges();
+            return product.Id;
         }
 
-        // Delete a product from the database by its ID
         public void DeleteProduct(int id)
         {
-            try
+            var product = GetProductById(id);
+            if (product != null)
             {
-                // Find the product to delete
-                var productToDelete = _context.products.FirstOrDefault(p => p.Id == id);
-
-                if (productToDelete == null)
-                {
-                    throw new KeyNotFoundException("Product not found.");
-                }
-
-                // Remove the product from the DbSet
-                _context.products.Remove(productToDelete);
-
-                // Save the changes to the database
+                _context.products.Remove(product);
                 _context.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException("An error occurred while deleting the product.", ex);
             }
         }
 
+        public Product UpdateProduct(int id, ProductInputDTO product)
+        {
+            var currentProduct = GetProductById(id);
+            if (currentProduct != null)
+            {
+                currentProduct.Name = product.Name;
+                currentProduct.Price = product.Price;
+                currentProduct.Category = product.Category;
 
+                _context.products.Update(currentProduct);
+                _context.SaveChanges();
+
+            }
+            return currentProduct;
+        }
     }
 }
